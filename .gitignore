@@ -1,0 +1,25 @@
+# Python / notebook cache
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Local environments
+.venv/
+venv/
+
+# User-requested exclusions
+Final_Report.md
+Final_Report.*
+checkpoints/
+checkpoints.json
+*.txt
+*Assignment*1*
+*assignment*1*
+*Assess*1*
+*assess*1*
+
+# Keep outputs tracked
+!outputs/
+!outputs/**
+Individual_Report_Template_2026.docx
+PRT597_ABSA_Report_BACKUP.docx
