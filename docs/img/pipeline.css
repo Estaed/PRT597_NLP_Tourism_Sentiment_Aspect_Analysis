@@ -1,0 +1,30 @@
+/* Shared style of pipeline-dark.html and pipeline-light.html. */
+:root {
+  --canvas: #0E0E0E; --surface-1: #191919; --hairline: #2E2E2E;
+  --ink: #EEEEEE; --ink-muted: #ABABAB; --ink-subtle: #8C8C8C; --primary: #FF5A00;
+}
+[data-theme="light"] {
+  --canvas: #F7F7F7; --surface-1: #FFFFFF; --hairline: #E3E3E3;
+  --ink: #121212; --ink-muted: #5B5B5B; --ink-subtle: #6C6C6C; --primary: #D34303;
+}
+* { box-sizing: border-box; margin: 0; }
+body { width: 1100px; height: 600px; background: var(--canvas); color: var(--ink);
+       font-family: Manrope, sans-serif; font-weight: 500; padding: 30px 40px; }
+.eyebrow { font-size: 17px; font-weight: 600; color: var(--ink-muted); }
+h1 { font-family: Archivo, sans-serif; font-stretch: 118%; font-weight: 700; font-size: 32px;
+     letter-spacing: -0.5px; line-height: 1.08; margin: 6px 0 20px; }
+.rows { background: var(--surface-1); border: 1px solid var(--hairline); border-radius: 12px; }
+.row { position: relative; display: grid; grid-template-columns: 40px 190px 1fr 180px;
+       align-items: center; column-gap: 12px; height: 70px; padding: 0 20px;
+       border-top: 1px solid var(--hairline); color: var(--ink-subtle); }
+.row:first-child { border-top: 0; }
+.n, .fig { font-variant-numeric: tabular-nums; font-weight: 600; }
+.n { font-size: 20px; }
+.t { font-size: 22px; font-weight: 700; }
+.d { font-size: 20px; line-height: 1.3; }
+.fig { font-size: 20px; text-align: right; }
+.row.done { color: var(--ink-muted); }
+.row.on { color: var(--ink); }
+.row.on::after { content: ""; position: absolute; inset: 4px; border: 2px solid var(--primary);
+                 border-radius: 10px; }
+.source { margin-top: 14px; font-size: 16px; color: var(--ink-subtle); }
